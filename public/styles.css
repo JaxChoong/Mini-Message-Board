@@ -27,3 +27,16 @@ h3{
     display: inline;
     margin-right: 10px;
 }
+
+input{
+    border-radius: 5px;
+    border: 0.5px solid black ;
+    margin: 5px;
+}
+
+label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    margin: 5px;
+}
