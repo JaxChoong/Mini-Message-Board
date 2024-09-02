@@ -40,3 +40,12 @@ label{
     font-weight: bolder;
     margin: 5px;
 }
+
+button{
+    background-color: gray;
+    border: 0;
+    font-size: larger;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
