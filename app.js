@@ -12,6 +12,9 @@ app.set("view engine", "ejs")
 const assetsPath = path.join(__dirname, "public")
 app.use(express.static(assetsPath))
 
+// setup middleware to access POST forms.
+app.use(express.urlencoded({ extended: true }));
+
 // setup messages
 const messages = [
     {
@@ -34,6 +37,13 @@ app.get("/new",(req,res)=>{
     res.render("form",{title: "Mini Messageboard"})
 })
 
+app.post("/new", (req,res)=>{
+    const message = req.body.messageInput
+    const name = req.body.nameInput
+    messages.push({text:message,user:name,added:new Date()})
+
+    res.redirect("/")
+})
 app.listen(PORT,()=>{
     console.log(`Listening through port ${PORT}`)
 })
