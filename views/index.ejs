@@ -4,13 +4,17 @@
         <title><%= title %></title>
     </head>
     <body>
-        <% messages.forEach((message)=>{ %>
-            <%= message.user %>
-            <br>
-            <%= message.text %>
-            <br>
-            <%= message.added %>
-            <br>
-        <% }) %>
+        <div id="board">
+            <% messages.forEach((message)=>{ %>
+            <div class="paper">
+                    <h3>Name:</h3><%= message.user %>
+                    <br>
+                    <h3>Message:</h3><%= message.text %>
+                    <br>
+                    <h3>Added:</h3><%= message.added %>
+                    <br>
+            </div>
+            <% }) %>
+        </div>
     </body>
 </html>
