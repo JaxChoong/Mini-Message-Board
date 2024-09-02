@@ -12,8 +12,26 @@ app.set("view engine", "ejs")
 const assetsPath = path.join(__dirname, "public")
 app.use(express.static(assetsPath))
 
+// setup messages
+const messages = [
+    {
+      text: "Hi there!",
+      user: "Amando",
+      added: new Date()
+    },
+    {
+      text: "Hello World!",
+      user: "Charles",
+      added: new Date()
+    }
+  ];
+  
 app.get("/", (req,res)=>{
-    res.render("index")
+    res.render("index",{title:"Mini Messageboard", messages: messages})
+})
+
+app.get("/new",(req,res)=>{
+    res.render("new")
 })
 
 app.listen(PORT,()=>{

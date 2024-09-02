@@ -1,9 +1,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="./styles.css">
-        <title>Mini Message Board</title>
+        <title><%= title %></title>
     </head>
     <body>
-        <h1>Welcome to my Message Board!</h1>
+        <% messages.forEach((message)=>{ %>
+            <%= message.user %>
+            <br>
+            <%= message.text %>
+            <br>
+            <%= message.added %>
+            <br>
+        <% }) %>
     </body>
 </html>
