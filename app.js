@@ -2,7 +2,7 @@ const express = require("express")
 const path = require("node:path")
 
 const app = express()
-const PORT = 3000
+const PORT = 2999
 
 // setup templating with ejs
 app.set("views",path.join(__dirname,"views"))
