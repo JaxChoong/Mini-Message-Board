@@ -9,10 +9,13 @@ body{
 #board{
     background-color: green;
     border: 10px solid chocolate;
-    width: 90vw;
-    height: 80vh;
+    min-width: 90vw;
+    min-height: 80vh;
     padding: 20px;
     display: flex;
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .paper{
