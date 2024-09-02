@@ -4,17 +4,22 @@
         <title><%= title %></title>
     </head>
     <body>
-        <div id="board">
-            <% messages.forEach((message)=>{ %>
-            <div class="paper">
-                    <h3>Name:</h3><%= message.user %>
-                    <br>
-                    <h3>Message:</h3><%= message.text %>
-                    <br>
-                    <h3>Added:</h3><%= message.added %>
-                    <br>
+        <div style="display: inline-block;text-align: center;"">
+            <div id="board">
+                <% messages.forEach((message)=>{ %>
+                <div class="paper">
+                        <h3>Name:</h3><%= message.user %>
+                        <br>
+                        <h3>Message:</h3><%= message.text %>
+                        <br>
+                        <h3>Added:</h3><%= message.added %>
+                        <br>
+                </div>
+                <% }) %>
             </div>
-            <% }) %>
+            <button style="margin: 10px;">
+                <a href="/new" style="text-decoration: none;color: white;">Write a Message</a>
+            </button>  
         </div>
     </body>
 </html>
